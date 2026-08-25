@@ -10980,12 +10980,12 @@ section.resume-section .resume-section-content {
 /* ---------- Color Palette ---------- */
 
 :root {
-    --bs-primary: #3FA89A;
-    --bs-primary-rgb: 63, 168, 154;
+    --bs-primary: #8DDCDC;
+    --bs-primary-rgb: 141, 220, 220;
 
-    --portfolio-teal: #3FA89A;
-    --portfolio-teal-dark: #2F8278;
-    --portfolio-teal-light: #E8F5F2;
+    --portfolio-teal: #8DDCDC;
+    --portfolio-teal-dark: #4F9E9E;
+    --portfolio-teal-light: #EAF9F9;
 
     --portfolio-dark: #263636;
     --portfolio-text: #3F4D4D;
