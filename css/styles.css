@@ -10980,18 +10980,18 @@ section.resume-section .resume-section-content {
 /* ---------- Color Palette ---------- */
 
 :root {
-    --bs-primary: #8DDCDC;
-    --bs-primary-rgb: 141, 220, 220;
+    --bs-primary: #427F80;
+    --bs-primary-rgb: 66, 127, 128;
 
-    --portfolio-teal: #8DDCDC;
-    --portfolio-teal-dark: #4F9E9E;
-    --portfolio-teal-light: #EAF9F9;
+    --portfolio-teal: #427F80;
+    --portfolio-teal-dark: #427F80;
+    --portfolio-teal-light: #427F80;
 
-    --portfolio-dark: #263636;
-    --portfolio-text: #3F4D4D;
+    --portfolio-dark: #427F80;
+    --portfolio-text: #427F80;
     --portfolio-muted: #6B7777;
-    --portfolio-light: #F7FAF9;
-    --portfolio-border: #DCE7E5;
+    --portfolio-light: #427F80;
+    --portfolio-border: #427F80;
 }
 
 
