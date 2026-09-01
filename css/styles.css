@@ -10985,7 +10985,6 @@ section.resume-section .resume-section-content {
 
 /* ---------- Color Palette ---------- */
 
-/* ---------- Color Palette ---------- */
 
 :root {
     --bs-primary: #427F80;
@@ -11029,10 +11028,8 @@ a:hover {
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
-    color: var(--portfolio-dark);
-    font-weight: 700;
-    letter-spacing: 0.04rem;
-    transition: color 0.2s ease, opacity 0.2s ease;
+   color: #ffffff;
+    opacity: 0.85;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link:hover {
