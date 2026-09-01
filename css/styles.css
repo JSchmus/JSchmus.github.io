@@ -11423,3 +11423,35 @@ h5,
 h6 {
     font-family: "Saira Extra Condensed", sans-serif;
 }
+
+/* ------------Project Grid setup ---------*/
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.project-grid .project-card {
+    flex: 0 0 calc(33.333% - 1rem);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0; /* grid gap handles spacing now */
+    overflow: hidden;
+}
+
+.project-grid .project-card img {
+    height: 45%; /* shrink image to leave room for text in a square */
+}
+
+@media (max-width: 768px) {
+    .project-grid .project-card {
+        flex: 0 0 calc(50% - 0.75rem);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .project-grid .project-card {
+        flex: 0 0 100%;
+    }
+}
