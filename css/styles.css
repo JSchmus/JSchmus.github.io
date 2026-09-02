@@ -10997,8 +10997,9 @@ section.resume-section .resume-section-content {
     --portfolio-dark: #427F80;
     --portfolio-text: #3F4D4D;
     --portfolio-muted: #6B7777;
-    --portfolio-light: #ffffff;
+    --portfolio-light: #427F80;
     --portfolio-border: #427F80;
+    --portfolio-white: #ffffff;
 }
 
 
@@ -11137,7 +11138,7 @@ h3 {
 
 .project-card:hover {
     transform: translateY(-4px);
-    border-color: var(--portfolio-teal);
+    border-color: var(--portfolio-white);
     box-shadow: 0 8px 24px rgba(38, 54, 54, 0.12);
 }
 
@@ -11162,7 +11163,7 @@ h3 {
 /* ---------- Project Title ---------- */
 
 .project-card h3 {
-    color: var(--portfolio-dark);
+    color: var(--portfolio-white);
     margin-bottom: 0.4rem;
     font-size: 2rem;
 }
@@ -11171,7 +11172,7 @@ h3 {
 /* ---------- Project Date / Organization ---------- */
 
 .project-meta {
-    color: var(--portfolio-teal-dark);
+    color: var(--portfolio-white);
     font-size: 0.95rem;
     font-weight: 700;
     margin-bottom: 1rem;
