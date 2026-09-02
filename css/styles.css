@@ -11464,3 +11464,11 @@ h6 {
         flex: 0 0 100%;
     }
 }
+
+.project-grid .project-card h3 {
+    font-size: 1.4rem; /* was 2rem via .project-card h3 */
+}
+
+.project-grid .project-card p {
+    font-size: 0.9rem;
+}
