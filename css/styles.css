@@ -11151,7 +11151,7 @@ h3 {
     height: 280px;
     object-fit: contain;
 
-    background-color: #ffffff;
+    background-color: var(--portfolio-teal-dark);
     border: 1px solid var(--portfolio-border);
     border-radius: 10px;
 
@@ -11217,7 +11217,7 @@ h3 {
 .project-link {
     display: inline-block;
 
-    color: var(--portfolio-teal-dark);
+    color: var(--portfolio-white);
     font-weight: 800;
     font-size: 0.9rem;
 
