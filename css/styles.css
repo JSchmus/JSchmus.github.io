@@ -11445,6 +11445,9 @@ h6 {
     object-position: center;
 }
 
+.project-grid .project-card img.focus-bottom {
+    object-position: bottom center;
+}
 @media (max-width: 768px) {
     .project-grid .project-card {
         flex: 0 0 calc(50% - 0.75rem);
