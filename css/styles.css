@@ -11438,7 +11438,10 @@ h6 {
 }
 
 .project-grid .project-card img {
-    height: 45%; /* shrink image to leave room for text in a square */
+    height: 45%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width: 768px) {
