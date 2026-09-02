@@ -11152,8 +11152,7 @@ h3 {
     object-fit: contain;
 
     background-color: var(--portfolio-teal-dark);
-    border: 1px solid var(--portfolio-border);
-    border-radius: 10px;
+    border: none;
 
     padding: 0.75rem;
     margin-bottom: 1.5rem;
@@ -11429,17 +11428,18 @@ h6 {
     gap: 1.5rem;
 }
 
+
 .project-grid .project-card {
     flex: 0 0 calc(33.333% - 1rem);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: unset;
+    min-height: 420px; /* adjust to taste */
     display: flex;
     flex-direction: column;
-    margin-bottom: 0; /* grid gap handles spacing now */
-    overflow: hidden;
+    overflow: visible;
 }
 
 .project-grid .project-card img {
-    height: 45%;
+    height: 200px; /* fixed px instead of % now that aspect-ratio is gone */
     width: 100%;
     object-fit: cover;
     object-position: center;
