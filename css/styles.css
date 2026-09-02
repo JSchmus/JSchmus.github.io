@@ -11397,11 +11397,11 @@ hr {
     }
 
     .project-card img {
-        height: 200px;
+        height: 250px;
     }
 
     .project-card h3 {
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
 
 }
