@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="TODO: project description" />
+        <meta name="description" content="Analog vs. Digital Cascading PID Control for a 6-DOF Quadcopter" />
         <meta name="author" content="Joy Schmus" />
-        <title>TODO: Project Title | Joy Schmus</title>
+        <title>Analog vs. Digital Cascading PID Control for a 6-DOF Quadcopter | Joy Schmus</title>
 
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
@@ -44,11 +44,13 @@
 
                     <div class="project-header">
                         <a class="project-link" href="index.html#projects">← BACK TO PROJECTS</a>
-                        <h2 class="mt-3">TODO: Project Title</h2>
-                        <div class="project-meta">TODO: Date · Organization</div>
+                        <h2 class="mt-3">Analog vs. Digital Cascading PID Control for a 6-DOF Quadcopter</h2>
+                        <div class="project-meta">Spring 2026 · Independent Research with Scholarship & Christianity in Oxford</div>
                         <div class="project-tags">
-                            <span class="tech-tag">TODO</span>
-                            <span class="tech-tag">TODO</span>
+                            <span class="tech-tag">MATLAB / Simulink</span>
+                            <span class="tech-tag">Simscape</span>
+                            <span class="tech-tag">PID Control</span>
+                            <span class="tech-tag">Analog Circuit Design</span>
                         </div>
                     </div>
 
@@ -56,12 +58,18 @@
 
                     <div class="project-section">
                         <h3>Overview</h3>
-                        <p>TODO: What the project is, why you did it, key outcomes.</p>
+                        <p>Digital PID controllers are standard in quadcopter flight control. This project investigated what would be required to 
+                            implement the same control architecture using analog circuitry, and where the analog approach would break down. I started by building a 
+                            digital cascading PID baseline in Simulink using a published 6-DOF quadcopter model: an outer x/y position loop feeding an inner roll/pitch loop, plus separate altitude and yaw loops.</p>
                     </div>
 
                     <div class="project-section">
                         <h3>Approach</h3>
-                        <p>TODO: Methods, tools, design process.</p>
+                        <p>I rebuilt every one of the digital controllers as an op-amp circuit, solving for the resistor and capacitor values that would reproduce each 
+                            controller's PID gains — using the same gains as a published digital-controller study to isolate the change to just analog vs. digital. Turning the x and y command 
+                            signals into roll and pitch angles required an analog multiplier stage. The controller also needed to calculate sine and cosine, so I built that approximation from a 
+                            two-term Maclaurin-series expansion using multiplication, gain, and op-amp summing stages. I referenced real components, an AD633 multiplier and TL072 op-amps, chosen
+                            for slew rate and low offset voltage, to keep the design grounded in realizable hardware.</p>
 
                         <div class="figure-container">
                             <img src="assets/img/placeholder.png" alt="TODO: supporting figure">
@@ -71,7 +79,11 @@
 
                     <div class="project-section">
                         <h3>Results</h3>
-                        <p>TODO: Data, findings, what worked/didn't.</p>
+                        <p>I tested both controllers against a step disturbance (wind gust) and sinusoidal disturbances (rotor vibration), increasing magnitude until each 
+                            controller stopped giving a bounded response, which for the analog circuit meant hitting the ±20V op-amp supply rails. Both controllers stabilized the 
+                            quadcopter, but the analog controller was consistently slower, overshot more, and lost stability first, saturating at just 0.00105 N·m of step torque, 
+                            while the digital controller remained stable at that level. I found that an analog cascading PID controller is technically feasible for a full quadcopter under nominal 
+                            conditions, with all axes remaining bounded. However, its lower disturbance margin makes digital control the more practical choice for flight applications.</p>
 
                         <div class="figure-container">
                             <img src="assets/img/placeholder.png" alt="TODO: results figure">
