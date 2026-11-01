@@ -11253,12 +11253,12 @@ h3 {
 .project-image {
     display: block;
     width: 100%;
+    max-width: 600px;   /* adjust to taste */
     height: auto;
+    margin: 1rem auto 2rem;
 
     border-radius: 10px;
     border: 1px solid var(--portfolio-border);
-
-    margin: 1rem 0 2rem;
 }
 
 .project-section {
