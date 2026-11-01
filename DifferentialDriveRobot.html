@@ -75,14 +75,18 @@
 
                     <div class="project-section">
                         <h3>Results</h3>
-                        <p>The rover didn't achieve the desired heading accuracy, primarily due to differences in motor variation and quality as well as wheel slip. We replaced one motor and repeated characterization, 
-                            but the errors persisted. Our proposed next step was adding an IMU for direct orientation measurement, reducing reliance on wheel-based encoder counts that couldn't 
-                            fully account for slip and motor behavior.</p>
+                        <p>The rover did not meet the heading accuracy target. Each motor was characterized separately, but the resulting models did not hold up during driving: 
+                            either wheel slip introduced motion the encoders could not detect, or the motors behaved differently under load than they did during characterization. 
+                            We replaced one motor and repeated characterization, but the errors persisted, which suggests the problem was not a single faulty motor. With more time, 
+                            we would add an IMU to measure orientation directly, so heading would no longer depend on wheel encoder counts alone.</p>
 
                         <div class="figure-container">
-                            <img src="assets/img/placeholder.png" alt="TODO: results figure">
-                            <div class="figure-caption">TODO: Figure caption</div>
-                        </div>
+                            <video controls preload="metadata" poster="assets/img/rover-poster.jpg">
+                            <source src="assets/RoverNavigationTrimmed.mp4" type="video/mp4">
+                            Your browser doesn't support embedded video.
+                            </video>
+                        <div class="figure-caption">Rover Navigation Test</div>
+</div>
                     </div>
 
                 </div>
