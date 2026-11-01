@@ -11279,13 +11279,16 @@ h3 {
 
 .figure-container {
     margin: 2rem 0;
+    text-align: center;
 }
 
-.figure-container img {
-    max-width: 100%;
-    height: auto;
+.figure-container img,
+.figure-container video {
     display: block;
-    margin: 0 auto;
+    width: 600px;        /* preferred size; adjust to taste */
+    max-width: 100%;     /* never wider than the container */
+    height: auto;        /* keeps aspect ratio, no cropping */
+    margin: 0 auto;      /* centers it */
 
     border-radius: 8px;
     border: 1px solid var(--portfolio-border);
