@@ -11097,7 +11097,7 @@ h3 {
 /* ---------- Accent Text ---------- */
 
 .text-primary {
-    color: var(--portfolio-teal-dark) !important;
+    color: var(--portfolio-light) !important;
 }
 
 
@@ -11285,21 +11285,13 @@ h3 {
 .figure-container img,
 .figure-container video {
     display: block;
-    width: 600px;        /* preferred size; adjust to taste */
-    max-width: 100%;     /* never wider than the container */
-    height: auto;        /* keeps aspect ratio, no cropping */
-    margin: 0 auto;      /* centers it */
-
-    border-radius: 8px;
-    border: 1px solid var(--portfolio-border);
-}
-
-.figure-container video {
-    display: block;
+    width: 600px;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
-    background: transparent;
+
+    border-radius: 8px;
+    border: 1px solid var(--portfolio-border);
 }
 
 .figure-container video.portrait {
