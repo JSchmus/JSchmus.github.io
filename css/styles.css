@@ -11294,6 +11294,19 @@ h3 {
     border: 1px solid var(--portfolio-border);
 }
 
+.figure-container video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.figure-container video.portrait {
+    width: auto;
+    max-height: 500px;
+}
+
 .figure-caption {
     text-align: center;
     color: var(--portfolio-muted);
