@@ -11151,7 +11151,7 @@ h3 {
     height: 280px;
     object-fit: contain;
 
-    background-color: var(--portfolio-teal-dark);
+    background-color: var(--portfolio-light);
     border: 1px solid var(--portfolio-muted);
     border-radius: 10px;
 
