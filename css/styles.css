@@ -11481,3 +11481,7 @@ h6 {
 .project-grid .project-card p {
     font-size: 0.9rem;
 }
+
+.card-placeholder {
+    color: #ffffff;
+}
