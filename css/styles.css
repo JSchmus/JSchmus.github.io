@@ -11182,7 +11182,7 @@ h3 {
 /* ---------- Project Description ---------- */
 
 .project-card p {
-    color: var(--portfolio-text);
+    color: var(--portfolio-white);
     line-height: 1.7;
     margin-bottom: 1.25rem;
 }
