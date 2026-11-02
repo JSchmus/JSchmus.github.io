@@ -66,8 +66,8 @@
                     <div class="project-section">
                         <h3>Approach</h3>
                         <p>I built and tested the first prototype using an IR transmitter/receiver pair, a common low-cost method for short-range wireless on/off control. 
-                            During testing with the actual battery-operated toys we targeted, the on command signal was recieved, but not the off-command singal. Troubleshooting traced the problem to the toys' 
-                            own DC motor noise that was interfering with the IR communication. It could easily recieve an IR command when the toy was off, but once the motors started, the off command was lost in the motor nosie.
+                            During testing with the actual battery-operated toys we targeted, the on command signal was received, but not the off-command signal. Troubleshooting traced the problem to the toys' 
+                            own DC motor noise that was interfering with the IR communication. It could easily receive an IR command when the toy was off, but once the motors started, the off command was lost in the motor noise.
                             I tested using an RF communication frequency instead which solved the problem and the final design uses a 433 MHz RF link between transmitter (switch) and receiver (attached to the toy).</p>
                         <p>To connect the RF receiver without modifying a toy's internal wiring, I built a battery interrupter inserted into the toy's existing battery compartment, made of two strips of 
                             dual-sided copper foil tape with the receiver's wires sandwiched between the conductive layers. Pressing the switch lets the receiver close the connection,
