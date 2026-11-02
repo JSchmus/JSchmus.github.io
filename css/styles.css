@@ -11197,10 +11197,10 @@ h3 {
 .tech-tag {
     display: inline-block;
 
-    background-color: var(--portfolio-teal-light);
+    background-color: #ffffff;
     color: var(--portfolio-teal-dark);
 
-    border: 1px solid #B8DDDB;
+    border: 1px solid var(--portfolio-teal-dark);
     border-radius: 20px;
 
     padding: 0.35rem 0.75rem;
@@ -11210,7 +11210,6 @@ h3 {
     font-weight: 700;
     letter-spacing: 0.02em;
 }
-
 
 /* ---------- Project Link ---------- */
 
