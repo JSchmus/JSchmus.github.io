@@ -46,33 +46,13 @@
                     <div class="project-tags">
                         <span class="tech-tag">Mechatronics</span>
                         <span class="tech-tag">Assistive Technology</span>
-                        <span class="tech-tag">Medical Device Design</span>
                         <span class="tech-tag">Control Systems</span>
                         <span class="tech-tag">Sensors &amp; Actuators</span>
                     </div>
 
                     <div class="project-section mt-4">
                         <h3>Overview</h3>
-                        <p>Stroke can leave the muscles that close the hand constantly firing while the muscles that open it barely respond. Our client, a stroke survivor with spasticity in his hand and wrist, lives with this every day. Over time the hand curls into a fist and the connective tissue tightens, which makes both rehabilitation and everyday tasks harder.</p>
-                        <p>He has tried commercial splints and a spring-loaded glove, but they were bulky, heavy, and difficult to put on with one hand. Our team is designing two devices in response, working closely with him and with occupational therapy faculty at Biola:</p>
-                        <ul>
-                            <li><strong>Static splint:</strong> holds the fingers extended and the thumb away from the palm to slow further curling. He should be able to put it on independently and wear it for long periods, including overnight.</li>
-                            <li><strong>Dynamic device:</strong> a powered hand exoskeleton that assists grasping and releasing during daily activities such as woodworking, car repair, and household tasks.</li>
-                        </ul>
-
-                        <h4>My Role</h4>
-                        <p>I am one of three engineers on the team, advised by faculty, occupational therapists, and an industry mentor. My research focus is systems and mechanical devices: surveying existing powered orthoses, comparing actuation and motion-transmission options, and evaluating sensors and control strategies for the dynamic device. I also contribute to concept generation, selection, and project planning for both devices.</p>
-
-                        <h4>Key Requirements</h4>
-                        <ul>
-                            <li><strong>Independent use:</strong> both devices must be donned with one hand and no caregiver.</li>
-                            <li><strong>Lightweight:</strong> under 3.5 lb, the weight of a previous glove that caused muscle spasms and back pain, with a goal of well below that.</li>
-                            <li><strong>Safe on insensate skin:</strong> the back of the hand has no sensation, so pressure distribution, breathability, and washable skin-contact materials are critical.</li>
-                            <li><strong>No palm contact (dynamic device):</strong> pressure on the palm stimulates the flexor muscles and works against relaxation.</li>
-                            <li><strong>Thumb positioning:</strong> hold the thumb away from the palm on both devices, since this helps the whole hand relax.</li>
-                            <li><strong>Grasp capability (dynamic device):</strong> support a cylindrical grasp with finger forces in the range measured during daily activities (about 1.4 to 34.8 N), plus an emergency shutoff.</li>
-                            <li><strong>Long-term wear:</strong> the splint is safe for 9+ hours, and the device is discreet and comfortable enough that he will actually use it.</li>
-                        </ul>
+                        <p>After a stroke, the muscles that close the hand can stay constantly active while the muscles that open it barely respond, leaving the hand curled in a fist. Our client, a stroke survivor, found existing splints and spring-loaded gloves too bulky, heavy, and difficult to put on with one hand. Working with him and Biola's occupational therapy faculty, our team of three engineers is building two devices: a static splint that holds the fingers open overnight and during rest, and a powered exoskeleton glove that assists grasping and releasing during daily tasks. My focus is researching actuation, sensing, and control options for the powered device.</p>
                     </div>
                 </div>
             </section>
@@ -84,31 +64,7 @@
                     <h2 class="mb-5">Approach</h2>
 
                     <div class="project-section">
-                        <h3>Design Concept</h3>
-                        <p>We followed a structured process: client interviews, consultations with occupational therapists, background research, a House of Quality, functional decomposition, morphological charts, and a weighted decision matrix. That produced multiple concepts for each device.</p>
-
-                        <h4>Static Splint</h4>
-                        <p>We selected a design built around individual finger cuffs that connect to a modular frame and a stationary wrist brace, with magnetic attachment points to make donning easier with one hand. The alternatives were a thick-tendon version with the same cuffs (Option 1) and a Velcro-based dorsal palm cuff (Option 3). Option 1 is a straightforward fallback if magnet testing shows the magnets are too weak or too risky.</p>
-
-                        <h4>Dynamic Device</h4>
-                        <p>The current concept is a glove-based exoskeleton with open fingertips and a rigid linkage/gear transmission, so it can drive both extension and flexion. A servo-driven closed-loop controller (PID) is planned, with EMG as a candidate command input and thin-film pressure and flex sensors as candidate feedback. We also considered a simpler finger-loop and tendon design with a button and threshold control, and several mixed variants.</p>
-
-                        <h3>Key Decisions</h3>
-                        <ul>
-                            <li><strong>Exoskeleton frame:</strong> it leaves the most freedom in how motion is transmitted, and it keeps contact off the palm.</li>
-                            <li><strong>Servo motors over pneumatics or basic DC motors:</strong> pneumatic systems in the literature needed control boxes of 1.6 to 2 kg plus compressors, which conflicts with our weight and discretion goals. Servos also have built-in position feedback and are easier to integrate.</li>
-                            <li><strong>Battery choice:</strong> AA batteries are the leading option because they are cheap, replaceable, and avoid the fire risk of LiPo cells. Rechargeable cells or a well-enclosed LiPo remain open depending on final weight.</li>
-                            <li><strong>Safety by design:</strong> the power switch doubles as an emergency stop by cutting the battery from the motors. Torque and force limits are planned.</li>
-                            <li><strong>Sensing and control strategy:</strong> because the client's extensor muscles barely fire, EMG may be unreliable, so alternative command inputs (a button, a pressure band, or sensors on the other arm) stay on the table. We plan to characterize the EMG signal before committing to closed-loop control.</li>
-                            <li><strong>Test components first:</strong> following industry advisor feedback, we will test the linkage and transmission with strings and rough prototypes before integrating motors and controls.</li>
-                        </ul>
-
-                        <!-- Add a figure here once you have a sketch, block diagram, or CAD screenshot:
-                        <div class="figure-container">
-                            <img src="assets/img/hpat-block-diagram.png" alt="HPAT system block diagram">
-                            <div class="figure-caption">HPAT system block diagram</div>
-                        </div>
-                        -->
+                        <p>We moved from client interviews and OT consultations through a House of Quality, morphological charts, and a weighted decision matrix to select a concept for each device. Both are designed to be put on with one hand, weigh well under 3.5 lb, and avoid pressure on the palm, which triggers the muscles that close the hand. The splint uses individual finger cuffs on a modular frame with magnetic attachment points. The powered glove uses an exoskeleton frame with a rigid linkage that can drive both opening and closing, servo motors, and a planned PID controller. We chose servos over pneumatics because the pneumatic systems in the literature required control boxes of 1.6 to 2 kg. The power switch also serves as an emergency stop by disconnecting the battery from the motors.</p>
                     </div>
                 </div>
             </section>
@@ -120,14 +76,7 @@
                     <h2 class="mb-5">Progress So Far</h2>
 
                     <div class="project-section">
-                        <ul>
-                            <li>Completed client interviews and consultations with occupational therapy faculty to define the problem, constraints, and user needs.</li>
-                            <li>Surveyed existing splints, powered gloves, and research exoskeletons, plus the literature on sensors, actuators, and control strategies for hand devices.</li>
-                            <li>Established requirements and standards, including FDA and ISO medical device standards, and built a House of Quality and project plan (Gantt charts and Jira).</li>
-                            <li>Generated and evaluated concepts for both devices, and selected the initial splint and dynamic device designs.</li>
-                            <li>Currently: preparing the midterm design review and moving into first prototypes. The splint is the first priority, using rough materials such as rods and rubber bands, with sketches and early CAD to follow.</li>
-                        </ul>
-                        <p>So far the biggest lesson is how much the best design depends on the person and the neurology behind the condition. Features that look helpful in a commercial product, such as palm contact, can work against rehabilitation, and our client's weak extensor signals may rule out some sensing options. Feedback has pushed us toward simpler, testable prototypes before committing to complex electronics.</p>
+                        <p>We have defined requirements and applicable medical device standards, surveyed existing devices and research, and selected initial concepts for both products. We are now preparing a midterm design review and starting rough prototypes. Early findings changed our plans: the client's opening muscles barely fire, so EMG control may be unreliable, and industry feedback pushed us to test the linkage mechanically before adding motors and electronics.</p>
                     </div>
                 </div>
             </section>
@@ -139,12 +88,7 @@
                     <h2 class="mb-5">Next Steps</h2>
 
                     <div class="project-section">
-                        <ul>
-                            <li><strong>Fall 2026:</strong> build and test rough splint prototypes, including magnet versus mechanical clip attachment, and collect client and OT feedback. Goal: a client- and OT-approved static splint by mid-December.</li>
-                            <li><strong>Fall 2026:</strong> prove out the dynamic device's linkage and motion transmission with simple mockups, evaluate EMG and alternative control inputs, and select motors, sensors, and a microcontroller. Goal: a rough dynamic prototype by the end of December.</li>
-                            <li><strong>Spring 2027:</strong> refine the dynamic prototype through CAD, fabrication, and controls tuning, then run preliminary and client testing, finishing in April.</li>
-                            <li><strong>Final validation:</strong> approval from the client and occupational therapists, with measured weight, grasp force, donning time, and safety checks (emergency stop, torque limits, skin checks).</li>
-                        </ul>
+                        <p>The goal is a client- and OT-approved splint by mid-December and a rough powered prototype by the end of the year. In spring we will refine the powered glove through CAD, fabrication, controls tuning, and client testing, finishing in April.</p>
                         <p><em>This page will be updated with results, photos, and testing data as the project progresses.</em></p>
                     </div>
                 </div>
