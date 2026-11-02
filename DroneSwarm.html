@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html#projects">← Back to Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#approach">Approach</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#progress">Progress</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#next-steps">Next Steps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                 </ul>
             </div>
         </nav>
@@ -47,7 +47,6 @@
                         <span class="tech-tag">Skybrush</span>
                         <span class="tech-tag">ArduPilot</span>
                         <span class="tech-tag">RTK GNSS</span>
-                        <span class="tech-tag">Wi-Fi / SiK Radio</span>
                     </div>
 
                     <div class="project-section mt-4">
@@ -55,7 +54,7 @@
                         <p>Our four-person team is building a new generation of Biola-owned swarm drones: small quadcopters with onboard LEDs that fly together to put on light shows on campus and promote Biola's Robotics Program. We are starting with a 2–3 drone prototype, with a long-term goal of 50–100 drones.</p>
 
                         <h4>My Role</h4>
-                        <p>I work on the show software and communications side: choosing the drone show software, designing how the ground station talks to the drones, and researching the networking and positioning hardware. I also helped select the flight controller.</p>
+                        <p>I work on the show software and communications side: choosing the drone show software, designing how the ground station talks to the drones, and researching the networking and positioning hardware.</p>
 
                         <h4>Key Requirements</h4>
                         <ul>
@@ -78,7 +77,7 @@
                         <p>We use Skybrush, an open-source drone show suite. Shows are designed ahead of time in Skybrush Studio and uploaded to each drone over a private Wi-Fi network before flight, so each drone then follows its stored trajectory without needing constant commands from the ground. A one-way SiK radio link carries RTK GPS corrections and emergency commands, so the drones can keep flying accurately even if Wi-Fi is lost. A laptop running Skybrush Live handles uploads and monitoring.</p>
 
                         <h3>Key Decisions</h3>
-                        <p>I compared Skybrush against DroneShowSoftware. Skybrush is free for small fleets (Live is free for up to 10 drones, Studio is free for community use), while DroneShowSoftware costs $1,990 per seat plus per-drone pricing, so the team went with Skybrush. Its firmware supports the Pixhawk 6C Mini but not the ARK FPV controller we had also considered, so we finalized the Pixhawk 6C Mini with ArduPilot. For the ground network, I recommended a dedicated router with 2.4/5 GHz support that can handle a growing swarm.</p>
+                        <p>I compared Skybrush against DroneShowSoftware. Skybrush is free for small fleets, while DroneShowSoftware costs $1,990 per seat plus per-drone pricing, so the team went with Skybrush. Its firmware supports the Pixhawk 6C Mini but not the ARK FPV controller we had also considered, so we finalized the Pixhawk 6C Mini with ArduPilot.</p>
 
                         <!-- Add a figure here once you have a block diagram or sketch:
                         <div class="figure-container">
@@ -128,7 +127,7 @@
                         <ul>
                             <li>Scan Wi-Fi channel congestion at the launch site to choose between 2.4 GHz, 5 GHz, and dual-band</li>
                             <li>Finalize router, radio, and GNSS receiver recommendations</li>
-                            <li>Test the communication link on the prototype drones before the December 11 prototype demonstration</li>
+                            <li>Test the communication link on the prototype drones before the December prototype demonstration</li>
                         </ul>
                         <p><em>This page will be updated with results, photos, and flight test data as the project progresses.</em></p>
                     </div>
