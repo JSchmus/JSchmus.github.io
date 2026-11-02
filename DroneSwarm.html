@@ -1,1 +1,143 @@
-<--Drone Swarm Project>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Drone Swarm Capstone, a senior engineering capstone project by Joy Schmus." />
+        <meta name="author" content="Joy Schmus" />
+        <title>Drone Swarm Capstone Consultant | Joy Schmus</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="index.html">
+                <span class="d-block d-lg-none">Joy Schmus</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.JPG" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">← Back to Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#approach">Approach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#progress">Progress</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#next-steps">Next Steps</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid p-0">
+
+            <!-- Overview -->
+            <section class="resume-section" id="overview">
+                <div class="resume-section-content">
+                    <div class="project-header">
+                        <h2 class="mb-1">Drone Swarm Capstone</h2>
+                        <div class="project-meta">
+                            2026–2027 · Biola University · Capstone
+                            <span class="status-badge">IN PROGRESS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span class="tech-tag">Skybrush</span>
+                        <span class="tech-tag">ArduPilot</span>
+                        <span class="tech-tag">RTK GNSS</span>
+                        <span class="tech-tag">Wi-Fi / SiK Radio</span>
+                    </div>
+
+                    <div class="project-section mt-4">
+                        <h3>Overview</h3>
+                        <p>Our four-person team is building a new generation of Biola-owned swarm drones: small quadcopters with onboard LEDs that fly together to put on light shows on campus and promote Biola's Robotics Program. We are starting with a 2–3 drone prototype, with a long-term goal of 50–100 drones.</p>
+
+                        <h4>My Role</h4>
+                        <p>I work on the show software and communications side: choosing the drone show software, designing how the ground station talks to the drones, and researching the networking and positioning hardware. I also helped select the flight controller.</p>
+
+                        <h4>Key Requirements</h4>
+                        <ul>
+                            <li>Show software compatible with our flight controller (Pixhawk 6C Mini with ArduPilot) that can scale to 50–100 drones</li>
+                            <li>A private ground-to-drone network that keeps working safely if the Wi-Fi link drops</li>
+                            <li>Shows that stay under the FAA 400 ft limit and are legible to the audience</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Approach -->
+            <section class="resume-section" id="approach">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Approach</h2>
+
+                    <div class="project-section">
+                        <h3>System Architecture</h3>
+                        <p>We use Skybrush, an open-source drone show suite. Shows are designed ahead of time in Skybrush Studio and uploaded to each drone over a private Wi-Fi network before flight, so each drone then follows its stored trajectory without needing constant commands from the ground. A one-way SiK radio link carries RTK GPS corrections and emergency commands, so the drones can keep flying accurately even if Wi-Fi is lost. A laptop running Skybrush Live handles uploads and monitoring.</p>
+
+                        <h3>Key Decisions</h3>
+                        <p>I compared Skybrush against DroneShowSoftware. Skybrush is free for small fleets (Live is free for up to 10 drones, Studio is free for community use), while DroneShowSoftware costs $1,990 per seat plus per-drone pricing, so the team went with Skybrush. Its firmware supports the Pixhawk 6C Mini but not the ARK FPV controller we had also considered, so we finalized the Pixhawk 6C Mini with ArduPilot. For the ground network, I recommended a dedicated router with 2.4/5 GHz support that can handle a growing swarm.</p>
+
+                        <!-- Add a figure here once you have a block diagram or sketch:
+                        <div class="figure-container">
+                            <img src="assets/img/swarm-architecture.png" alt="Swarm system architecture">
+                            <div class="figure-caption">Swarm system architecture</div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Progress -->
+            <section class="resume-section" id="progress">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Progress So Far</h2>
+
+                    <div class="project-section">
+                        <ul>
+                            <li>Compared drone show software on cost and requirements</li>
+                            <li>Selected the flight controller and flight software with a teammate</li>
+                            <li>Designed the Wi-Fi plus secondary-radio communication architecture</li>
+                            <li>Currently researching a Wi-Fi router, SiK radio, and GNSS receiver to recommend to the team</li>
+                        </ul>
+                        <p>The biggest lesson so far is that the secondary radio only works one way, so live telemetry still depends on Wi-Fi, and that some of our early hardware choices weren't supported by Skybrush and had to change.</p>
+
+                        <!-- When you have flight test footage (portrait phone video), use:
+                        <div class="figure-container">
+                            <video class="portrait" controls preload="metadata">
+                                <source src="assets/DroneTest.mp4" type="video/mp4">
+                                Your browser doesn't support embedded video.
+                            </video>
+                            <div class="figure-caption">Caption</div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Next Steps -->
+            <section class="resume-section" id="next-steps">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Next Steps</h2>
+
+                    <div class="project-section">
+                        <ul>
+                            <li>Scan Wi-Fi channel congestion at the launch site to choose between 2.4 GHz, 5 GHz, and dual-band</li>
+                            <li>Finalize router, radio, and GNSS receiver recommendations</li>
+                            <li>Test the communication link on the prototype drones before the December 11 prototype demonstration</li>
+                        </ul>
+                        <p><em>This page will be updated with results, photos, and flight test data as the project progresses.</em></p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
