@@ -51,7 +51,8 @@
 
                     <div class="project-section mt-4">
                         <h3>Overview</h3>
-                        <p>Our four-person team is building a new generation of Biola-owned swarm drones: small quadcopters with onboard LEDs that fly together to put on light shows on campus and promote Biola's Robotics Program. We are starting with a 2–3 drone prototype, with a long-term goal of 50–100 drones.</p>
+                        <p>Our four-person team is building a new generation of Biola-owned swarm drones: small quadcopters with onboard LEDs 
+                            that fly together to put on light shows on campus and promote Biola's Robotics Program. We are starting with a 2–3 drone prototype, with a long-term goal of 50–100 drones.</p>
 
                         <h4>My Role</h4>
                         <p>I work on the show software and communications side: choosing the drone show software, designing how the ground station talks to the drones, and researching the networking and positioning hardware.</p>
@@ -74,10 +75,15 @@
 
                     <div class="project-section">
                         <h3>System Architecture</h3>
-                        <p>We use Skybrush, an open-source drone show suite. Shows are designed ahead of time in Skybrush Studio and uploaded to each drone over a private Wi-Fi network before flight, so each drone then follows its stored trajectory without needing constant commands from the ground. A one-way SiK radio link carries RTK GPS corrections and emergency commands, so the drones can keep flying accurately even if Wi-Fi is lost. A laptop running Skybrush Live handles uploads and monitoring.</p>
+                        <p>The team selected Skybrush for drone-show planning and monitoring, with Skybrush Studio used to prepare shows and Skybrush Live used for ground-station operations. 
+                            The selected flight-control hardware is the Pixhawk 6C Mini running ArduPilot. We are evaluating a private Wi-Fi network for show uploads and ground-station 
+                            communication, along with a secondary radio and GNSS/RTK positioning hardware. A key design question is how these links will divide responsibilities and how
+                            the system will behave if either link becomes unavailable. The final architecture will depend on hardware compatibility and testing.</p>
 
                         <h3>Key Decisions</h3>
-                        <p>I compared Skybrush against DroneShowSoftware. Skybrush is free for small fleets, while DroneShowSoftware costs $1,990 per seat plus per-drone pricing, so the team went with Skybrush. Its firmware supports the Pixhawk 6C Mini but not the ARK FPV controller we had also considered, so we finalized the Pixhawk 6C Mini with ArduPilot.</p>
+                        <p>I compared Skybrush with DroneShowSoftware, considering cost and project requirements. Skybrush was the better fit for our initial small fleet and 
+                            budget. We also selected the Pixhawk 6C Mini with ArduPilot after checking flight-controller compatibility with the show software. 
+                            These decisions narrowed the options for the remaining communication and positioning hardware.</p>
 
                         <!-- Add a figure here once you have a block diagram or sketch:
                         <div class="figure-container">
@@ -96,13 +102,11 @@
                     <h2 class="mb-5">Progress So Far</h2>
 
                     <div class="project-section">
-                        <ul>
-                            <li>Compared drone show software on cost and requirements</li>
-                            <li>Selected the flight controller and flight software with a teammate</li>
-                            <li>Designed the Wi-Fi plus secondary-radio communication architecture</li>
-                            <li>Currently researching a Wi-Fi router, SiK radio, and GNSS receiver to recommend to the team</li>
-                        </ul>
-                        <p>The biggest lesson so far is that the secondary radio only works one way, so live telemetry still depends on Wi-Fi, and that some of our early hardware choices weren't supported by Skybrush and had to change.</p>
+                        
+                        <p>So far, our team has compared drone-show software, selected the flight controller and flight software, and developed a preliminary communication 
+                            architecture. I am currently researching suitable Wi-Fi, secondary-radio, and GNSS/RTK hardware. One important constraint is that a secondary 
+                            radio link may not provide the same two-way communication as Wi-Fi, so telemetry and loss-of-link behavior need to be considered separately. 
+                            The architecture still needs to be validated with the actual hardware and software configuration.</p>
 
                         <!-- When you have flight test footage (portrait phone video), use:
                         <div class="figure-container">
@@ -125,7 +129,7 @@
 
                     <div class="project-section">
                         <ul>
-                            <li>Scan Wi-Fi channel congestion at the launch site to choose between 2.4 GHz, 5 GHz, and dual-band</li>
+                            <li>Research something about what happens if wifi is lost</li>
                             <li>Finalize router, radio, and GNSS receiver recommendations</li>
                             <li>Test the communication link on the prototype drones before the December prototype demonstration</li>
                         </ul>
