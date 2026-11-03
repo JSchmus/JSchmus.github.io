@@ -70,9 +70,11 @@
 
                     <div class="project-section">
                         <h3>Design Reflection</h3>
-                        <p>If I were approaching this same project as a senior, I'd perform a more rigorous power and thrust analysis before selecting components. 
-                            Although the batteries provided sufficient nominal capacity, the 1S voltage and voltage losses through the L298N motor drivers limited power
-                            available to the motors under load. I'd select motors, drivers, and battery as a complete system using measured current and thrust requirements, with margin for peak loads.</p>
+                        <p>If I were approaching this same project as a senior, I'd perform a more rigorous power and thrust analysis before selecting components. Many of the components we sourced 
+                            from Amazon lacked complete datasheets, making it difficult to determine important specifications such as motor stall current, driver operating limits and voltage drop, and boost converter capabilities. 
+                            I also initially underestimated the importance of battery discharge ratings and current requirements. We experienced inconsistent motor speeds during testing, 
+                            highlighting the need to account for battery performance under load and voltage losses through the L298N motor drivers. I'd prioritize components with reliable 
+                            documentation and select the motors, drivers, and battery as a complete system using measured current and thrust requirements, with sufficient margin for peak loads.</p>
 
                         <div class="figure-container">
                            <video class="portrait" controls preload="metadata">
