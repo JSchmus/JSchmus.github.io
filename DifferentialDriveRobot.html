@@ -57,8 +57,8 @@
 
                     <div class="project-section">
                         <h3>Overview</h3>
-                        <p>We developed a differential-drive rover capable of navigating to a target, retrieving an object, and delivering it to a designated location. 
-                            We derived and validated the rover's forward and inverse kinematics in MATLAB/Simulink before deploying them to hardware.</p>
+                        <p>Our team developed a differential-drive rover to navigate to a target, retrieve an object, and deliver it to a designated location.
+                            We derived and checked the rover's forward and inverse kinematics in MATLAB/Simulink before implementing the navigation and control system on the physical robot.</p>
                     </div>
 
                     <div class="project-section">
@@ -78,7 +78,7 @@
                         <h3>Results</h3>
                         <p>The rover did not meet the heading accuracy target. Each motor was characterized separately, but the resulting models did not hold up during driving: 
                             either wheel slip introduced motion the encoders could not detect, or the motors behaved differently under load than they did during characterization. 
-                            We replaced one motor and repeated characterization, but the errors persisted, which suggests the problem was not a single faulty motor. With more time, 
+                            We replaced one motor and repeated characterization, but the errors persisted. With more time, 
                             we would add an IMU to measure orientation directly, so heading would no longer depend on wheel encoder counts alone.</p>
 
                         <div class="figure-container">
