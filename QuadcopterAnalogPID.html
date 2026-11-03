@@ -58,17 +58,17 @@
 
                     <div class="project-section">
                         <h3>Overview</h3>
-                        <p>Digital PID controllers are standard in quadcopter flight control. This project investigated what would be required to 
-                            implement the same control architecture using analog circuitry, and where the analog approach would break down. I started by building a 
-                            digital cascading PID baseline in Simulink using a published 6-DOF quadcopter model: an outer x/y position loop feeding an inner roll/pitch loop, plus separate altitude and yaw loops.</p>
+                        <p>Digital PID controllers are widely used in quadcopter flight control. This project investigated whether the same cascading control architecture could be
+                            implemented with analog circuitry and how its performance compared with a digital implementation. I developed a digital baseline in Simulink using a published 
+                            6-DOF quadcopter model, with outer position loops feeding inner roll and pitch loops, alongside separate altitude and yaw loops. I then used the same controller 
+                            gains to compare the analog and digital approaches under the same simulated disturbances.</p>
                     </div>
 
                     <div class="project-section">
                         <h3>Approach</h3>
-                        <p>I rebuilt every one of the digital controllers as an op-amp circuit, solving for the resistor and capacitor values that would reproduce each 
-                            controller's PID gains — using the same gains as a published digital-controller study to isolate the change to just analog vs. digital. Turning the x and y command 
-                            signals into roll and pitch angles required an analog multiplier stage. The controller also needed to calculate sine and cosine, so I built that approximation from a 
-                            two-term Maclaurin-series expansion using multiplication, gain, and op-amp summing stages. I referenced real components, an AD633 multiplier and TL072 op-amps, chosen
+                        <p>I translated the digital PID controllers into op-amp circuit designs by calculating resistor and capacitor values to reproduce the selected controller gains. 
+                            Converting the x- and y-position commands into roll and pitch references required an analog multiplier stage. I also designed an approximation of the required sine and 
+                            cosine functions using a two-term Maclaurin series implemented with multiplication, gain, and summing stages. I referenced real components, an AD633 multiplier and TL072 op-amps, chosen
                             for slew rate and low offset voltage, to keep the design grounded in realizable hardware.</p>
 
                         <div class="figure-container">
@@ -79,11 +79,10 @@
 
                     <div class="project-section">
                         <h3>Results</h3>
-                        <p>I tested both controllers against a step disturbance (wind gust) and sinusoidal disturbances (rotor vibration), increasing magnitude until each 
-                            controller stopped giving a bounded response, which for the analog circuit meant hitting the ±20V op-amp supply rails. Both controllers stabilized the 
-                            quadcopter, but the analog controller was consistently slower, overshot more, and lost stability first, saturating at just 0.00105 N·m of step torque, 
-                            while the digital controller remained stable at that level. I found that an analog cascading PID controller is technically feasible for a full quadcopter under nominal 
-                            conditions, with all axes remaining bounded. However, its lower disturbance margin makes digital control the more practical choice for flight applications.</p>
+                        <p>In simulation, I tested both controllers against step disturbances representing wind gusts and sinusoidal disturbances representing rotor vibration, increasing disturbance 
+                            magnitude to compare their stability limits. The analog controller responded more slowly, overshot more, and reached its ±20 V supply rails at a step torque of 0.00105 N·m, 
+                            while the digital controller remained stable at that disturbance level. The results suggest that an analog implementation can stabilize the modeled system under nominal conditions,
+                            but its lower disturbance tolerance makes it less suitable than digital control for this application. These findings are based on the simulated model rather than physical flight testing.</p>
 
                         <div class="figure-container">
                             <img src="assets/img/quadcopter response to step disturbance.jpg" alt="TODO: results figure">
